@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="parent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="275.0" prefWidth="441.0" style="-fx-background-color: #c2c2d6;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.MainGenresAddGenreController">
+   <children>
+      <VBox prefHeight="217.0" prefWidth="438.0">
+         <children>
+            <HBox prefHeight="74.0" prefWidth="446.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="54.0" prefWidth="138.0" style="-fx-background-color: transparent; -fx-text-fill: black;" text="Add Genre">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="144.0" top="20.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="1.0" />
+                     </padding>
+                  </Label>
+                  <Button fx:id="btnClose" mnemonicParsing="false" prefHeight="6.0" prefWidth="28.0" style="-fx-background-color: transparent;" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="53.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/baseline_close_black_48dp.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="130.0" top="-2.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets right="-5.0" />
+                     </padding>
+                  </Button>
+               </children>
+            </HBox>
+            <TextField fx:id="textName" prefHeight="23.0" prefWidth="382.0" promptText="Enter Genre Name" style="-fx-background-color: transparent; -fx-border-color: black; -fx-text-fill: black; -fx-prompt-text-fill: black;">
+               <VBox.margin>
+                  <Insets left="100.0" right="100.0" top="40.0" />
+               </VBox.margin>
+            </TextField>
+            <Button fx:id="btnPhoto" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: black; -fx-text-fill: black;" text="Choose photo">
+               <VBox.margin>
+                  <Insets left="247.0" top="25.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnAddGenre" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: black; -fx-text-fill: black;" text="Add Genre!">
+               <VBox.margin>
+                  <Insets left="175.0" top="25.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="parent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="424.0" prefWidth="668.0" style="-fx-background-color: #c2c2d6;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.MainMoviesAddMovieController">
+   <children>
+      <VBox prefHeight="424.0" prefWidth="675.0">
+         <children>
+            <HBox prefHeight="74.0" prefWidth="446.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="54.0" prefWidth="165.0" style="-fx-background-color: transparent; -fx-text-fill: black;" text="Add Movie">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="250.0" top="20.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="1.0" />
+                     </padding>
+                  </Label>
+                  <Button fx:id="btnClose" mnemonicParsing="false" prefHeight="6.0" prefWidth="28.0" style="-fx-background-color: transparent;" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="53.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/baseline_close_black_48dp.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="225.0" top="-2.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets right="-5.0" />
+                     </padding>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="textTitle" prefHeight="27.0" prefWidth="230.0" promptText="Enter Movie Title" style="-fx-background-color: transparent; -fx-border-color: black; -fx-text-fill: black; -fx-prompt-text-fill: black;">
+                     <HBox.margin>
+                        <Insets left="60.0" right="20.0" top="15.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField fx:id="textDescription" prefHeight="27.0" prefWidth="230.0" promptText="Enter short description" style="-fx-background-color: transparent; -fx-border-color: black; -fx-text-fill: black; -fx-prompt-text-fill: black;">
+                     <HBox.margin>
+                        <Insets left="60.0" right="20.0" top="15.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="textYear" prefHeight="27.0" prefWidth="230.0" promptText="Enter Movie Year" style="-fx-background-color: transparent; -fx-border-color: black; -fx-prompt-text-fill: black; -fx-text-fill: black;">
+                     <HBox.margin>
+                        <Insets left="60.0" right="20.0" top="15.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField fx:id="textMetascore" prefHeight="27.0" prefWidth="230.0" promptText="Enter Movie metascore" style="-fx-background-color: transparent; -fx-border-color: black; -fx-text-fill: black; -fx-prompt-text-fill: black;">
+                     <HBox.margin>
+                        <Insets left="60.0" right="20.0" top="15.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="textCertificate" prefHeight="27.0" prefWidth="230.0" promptText="Enter Movie certificate" style="-fx-background-color: transparent; -fx-border-color: black; -fx-prompt-text-fill: black; -fx-text-fill: black;">
+                     <HBox.margin>
+                        <Insets left="60.0" right="20.0" top="15.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField fx:id="textVotes" prefHeight="27.0" prefWidth="230.0" promptText="Enter number of votes" style="-fx-background-color: transparent; -fx-border-color: black; -fx-prompt-text-fill: black; -fx-text-fill: black;">
+                     <HBox.margin>
+                        <Insets left="60.0" right="20.0" top="15.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="textRuntime" prefHeight="27.0" prefWidth="230.0" promptText="Enter movie runtime" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-prompt-text-fill: black; -fx-border-color: black;">
+                     <HBox.margin>
+                        <Insets left="60.0" right="20.0" top="15.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField fx:id="textGross" prefHeight="27.0" prefWidth="230.0" promptText="Enter Movie gross" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-prompt-text-fill: black; -fx-border-color: black;">
+                     <HBox.margin>
+                        <Insets left="60.0" right="20.0" top="15.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="textIMDB" prefHeight="27.0" prefWidth="230.0" promptText="Enter IMDB rating" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-prompt-text-fill: black; -fx-border-color: black;">
+                     <HBox.margin>
+                        <Insets left="60.0" right="20.0" top="15.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField fx:id="textMoviescore" prefHeight="27.0" prefWidth="230.0" promptText="Enter Moviescore" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-prompt-text-fill: black; -fx-border-color: black;">
+                     <HBox.margin>
+                        <Insets left="60.0" right="20.0" top="15.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btnAddMovie" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: black; -fx-text-fill: black;" text="Add Movie">
+                     <HBox.margin>
+                        <Insets left="291.0" right="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btnPhoto" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: black; -fx-text-fill: black;" text="Choose photo">
+                     <HBox.margin>
+                        <Insets left="120.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

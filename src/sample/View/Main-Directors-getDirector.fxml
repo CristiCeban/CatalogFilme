@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="parent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="424.0" prefWidth="676.0" style="-fx-background-color: #9494b8;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.MainDirectorsGetDirectorController">
+   <children>
+      <VBox prefHeight="424.0" prefWidth="675.0">
+         <children>
+            <HBox prefHeight="74.0" prefWidth="446.0">
+               <children>
+                  <Button mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: black;">
+                     <graphic>
+                        <ImageView fx:id="imageview" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="35.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <VBox prefHeight="121.0" prefWidth="514.0">
+                     <children>
+                        <HBox prefHeight="42.0" prefWidth="514.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Direcotor:">
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="text_director" editable="false" prefHeight="42.0" prefWidth="462.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-prompt-text-fill: black;">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </TextField>
+                              <Button fx:id="btnClose" mnemonicParsing="false" prefHeight="6.0" prefWidth="28.0" style="-fx-background-color: transparent;" textFill="WHITE">
+                                 <graphic>
+                                    <ImageView fitHeight="53.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/baseline_close_black_48dp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <padding>
+                                    <Insets right="-5.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="-5.0" top="-2.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="42.0" prefWidth="514.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Year:">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <TextField fx:id="text_year" editable="false" prefHeight="21.0" prefWidth="456.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-prompt-text-fill: black;">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="57.0" prefWidth="514.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="About:">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="9.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <TextFlow fx:id="text_about" prefHeight="44.0" prefWidth="456.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-prompt-text-fill: black;">
+                              </TextFlow>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="675.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Movies with actor:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="160.0" top="5.0" />
+                     </HBox.margin>
+                  </Text>
+                  <TextField fx:id="directorField" style="-fx-background-color: transparent; -fx-text-fill: black;">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <GridPane prefHeight="389.0" prefWidth="675.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="120.8000244140625" minHeight="10.0" prefHeight="30.199993896484372" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="247.20001220703125" minHeight="10.0" prefHeight="245.60000610351562" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <children>
+                  <HBox prefHeight="30.0" prefWidth="675.0">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="29.0" prefWidth="29.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/baseline_find_in_page_black_48dp.png" />
+                                 </image></ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets top="-3.0" />
+                           </HBox.margin>
+                        </Button>
+                        <TextField fx:id="filterField" alignment="CENTER" prefHeight="29.0" prefWidth="404.0" promptText="Search..." style="-fx-border-color: #33334d;">
+                           <HBox.margin>
+                              <Insets right="10.0" top="-3.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <TableView fx:id="table" prefHeight="245.0" prefWidth="578.0" GridPane.rowIndex="1">
+                    <columns>
+                      <TableColumn fx:id="table_id" prefWidth="41.599974036216736" text="Id" />
+                      <TableColumn fx:id="table_title" prefWidth="133.59998321533203" text="Title" />
+                        <TableColumn fx:id="table_year" prefWidth="40.7999267578125" text="Year" />
+                        <TableColumn fx:id="table_certificate" prefWidth="69.5999755859375" text="Certificate" />
+                        <TableColumn fx:id="table_run_Time" prefWidth="55.20001220703125" text="Runtime" />
+                        <TableColumn fx:id="table_IMDB_Rating" prefWidth="78.4000244140625" text="IMDB_Rating" />
+                        <TableColumn fx:id="table_description" prefWidth="145.59994506835938" text="Description" />
+                        <TableColumn fx:id="table_image" prefWidth="107.9999877929688" text="Image" />
+                    </columns>
+                  </TableView>
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

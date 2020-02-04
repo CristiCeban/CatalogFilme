@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="parent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="524.0" prefWidth="857.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.MainActorsController">
+   <children>
+      <VBox prefHeight="524.0" prefWidth="214.0" style="-fx-background-color: #3F2B63;">
+         <children>
+            <Pane prefHeight="105.0" prefWidth="214.0" style="-fx-background-color: #2e004d;">
+               <children>
+                  <Label fx:id="lblMovieManager" layoutX="14.0" layoutY="30.0" prefHeight="46.0" prefWidth="186.0" text="Movie Manager" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Button fx:id="btnHome" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="45.0" prefWidth="238.0" style="-fx-background-color: transparent;" text="Home" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/baseline_home_white_48dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="65.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnMovies" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="45.0" prefWidth="222.0" style="-fx-background-color: transparent;" text="Movies" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/baseline_movie_white_48dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="65.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnGenres" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="45.0" prefWidth="222.0" style="-fx-background-color: transparent;" text="Genres" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/baseline_category_white_48dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="65.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnActors" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="45.0" prefWidth="222.0" style="-fx-background-color: transparent;" text="Actors" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/baseline_recent_actors_white_48dp.png" />
+                     </image></ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="65.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnDirectors" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="46.0" prefWidth="220.0" style="-fx-background-color: transparent;" text="Directors" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/baseline_person_white_48dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="65.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnExport" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="45.0" prefWidth="236.0" style="-fx-background-color: transparent;" text="Export" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/baseline_assignment_returned_white_48dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="65.0" />
+               </padding>
+            </Button>
+         </children></VBox>
+      <GridPane layoutX="214.0" layoutY="201.0" prefHeight="322.0" prefWidth="644.0" style="-fx-background-color: transparent;">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="128.9999755859375" minHeight="10.0" prefHeight="36.8" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="293.6" minHeight="10.0" prefHeight="285.6" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TableView fx:id="table" prefHeight="312.0" prefWidth="644.0" style="-fx-background-color: transparent;" GridPane.rowIndex="1">
+              <columns>
+                  <TableColumn fx:id="table_id" prefWidth="61.800018310546875" style="-fx-background-color: transparent;" text="Id" />
+                  <TableColumn fx:id="table_name" prefWidth="155.60000610351562" style="-fx-background-color: transparent;" text="Name" />
+                  <TableColumn fx:id="table_year" minWidth="0.0" prefWidth="88.80001831054688" style="-fx-background-color: transparent;" text="Year" />
+                  <TableColumn fx:id="table_about" prefWidth="199.39996337890625" style="-fx-background-color: transparent;" text="About" />
+                  <TableColumn fx:id="table_imagine" prefWidth="138.20001220703125" style="-fx-background-color: transparent;" text="image" />
+              </columns>
+            </TableView>
+            <HBox alignment="CENTER_LEFT" prefHeight="33.0" prefWidth="542.0" style="-fx-background-color: transparent;">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="27.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/baseline_find_in_page_black_48dp.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <TextField fx:id="filterField" alignment="CENTER" prefHeight="27.0" prefWidth="430.0" promptText="Search..." style="-fx-border-color: #3F2B63;">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="btnAddActor" mnemonicParsing="false" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #2a0080;" text="Add Actor" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/baseline_add_white_48dp.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="15.0" top="-1.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </GridPane>
+      <Pane layoutX="214.0" layoutY="59.0" prefHeight="106.0" prefWidth="644.0" style="-fx-background-color: #7156DD;">
+         <children>
+            <Label layoutX="93.0" layoutY="27.0" prefHeight="32.0" prefWidth="122.0" text="Actors" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="36.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Button fx:id="btnClose" layoutX="824.0" layoutY="-2.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="53.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/baseline_close_black_48dp.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="parent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="424.0" prefWidth="668.0" style="-fx-background-color: #9494b8;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.MainMoviesGetMovieController">
+   <children>
+      <VBox prefHeight="424.0" prefWidth="675.0">
+         <children>
+            <HBox prefHeight="74.0" prefWidth="446.0">
+               <children>
+                  <Button mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: black;">
+                     <graphic>
+                        <ImageView fx:id="imageview" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="35.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <VBox prefHeight="121.0" prefWidth="514.0">
+                     <children>
+                        <HBox prefHeight="42.0" prefWidth="514.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Title:">
+                                 <HBox.margin>
+                                    <Insets top="9.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="text_title" editable="false" prefHeight="39.0" prefWidth="183.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-prompt-text-fill: black;">
+                                 <HBox.margin>
+                                    <Insets top="2.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Genres:">
+                                 <HBox.margin>
+                                    <Insets top="9.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="text_genre" editable="false" prefHeight="39.0" prefWidth="204.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-prompt-text-fill: black;">
+                                 <HBox.margin>
+                                    <Insets top="3.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                              <Button fx:id="btnClose" mnemonicParsing="false" prefHeight="6.0" prefWidth="28.0" style="-fx-background-color: transparent;" textFill="WHITE">
+                                 <graphic>
+                                    <ImageView fitHeight="53.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/baseline_close_black_48dp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" top="-2.0" />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets right="-5.0" />
+                                 </padding>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="42.0" prefWidth="514.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Actor(s):">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="9.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <TextField fx:id="text_actors" editable="false" prefHeight="27.0" prefWidth="422.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-prompt-text-fill: black;">
+                                 <HBox.margin>
+                                    <Insets top="2.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="42.0" prefWidth="514.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Director(s):">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="9.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <TextField fx:id="text_directors" editable="false" prefHeight="27.0" prefWidth="400.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-prompt-text-fill: black;">
+                                 <HBox.margin>
+                                    <Insets top="2.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Description:">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" top="5.0" />
+                     </HBox.margin>
+                  </Text>
+                  <TextFlow fx:id="text_description" lineSpacing="2.0" prefHeight="22.0" prefWidth="496.0">
+                     <HBox.margin>
+                        <Insets top="13.0" />
+                     </HBox.margin></TextFlow>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Year:">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" top="15.0" />
+                     </HBox.margin>
+                  </Text>
+                  <TextField fx:id="text_year" editable="false" prefHeight="27.0" prefWidth="264.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-prompt-text-fill: black;">
+                     <HBox.margin>
+                        <Insets top="9.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Metascore:">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="15.0" />
+                     </HBox.margin>
+                  </Text>
+                  <TextField fx:id="text_metascore" editable="false" prefHeight="27.0" prefWidth="222.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-prompt-text-fill: black;">
+                     <HBox.margin>
+                        <Insets top="9.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Certificate:">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" top="15.0" />
+                     </HBox.margin>
+                  </Text>
+                  <TextField fx:id="text_certificate" editable="false" prefHeight="27.0" prefWidth="215.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-prompt-text-fill: black;">
+                     <HBox.margin>
+                        <Insets top="9.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="gross:">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="15.0" />
+                     </HBox.margin>
+                  </Text>
+                  <TextField fx:id="text_gross" editable="false" prefHeight="27.0" prefWidth="285.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-prompt-text-fill: black;">
+                     <HBox.margin>
+                        <Insets top="9.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="IMDB:">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" top="15.0" />
+                     </HBox.margin>
+                  </Text>
+                  <TextField fx:id="text_imdb" editable="false" prefHeight="27.0" prefWidth="254.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-prompt-text-fill: black;">
+                     <HBox.margin>
+                        <Insets top="9.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Votes:">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="15.0" />
+                     </HBox.margin>
+                  </Text>
+                  <TextField fx:id="text_votes" editable="false" prefHeight="27.0" prefWidth="279.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-prompt-text-fill: black;">
+                     <HBox.margin>
+                        <Insets top="9.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Runtime:">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" top="15.0" />
+                     </HBox.margin>
+                  </Text>
+                  <TextField fx:id="text_runtime" editable="false" prefHeight="27.0" prefWidth="230.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-prompt-text-fill: black;">
+                     <HBox.margin>
+                        <Insets top="9.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="MovieScore:">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="15.0" />
+                     </HBox.margin>
+                  </Text>
+                  <TextField fx:id="text_moviescore" editable="false" prefHeight="27.0" prefWidth="229.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-prompt-text-fill: black;">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

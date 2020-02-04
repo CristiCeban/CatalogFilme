@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox fx:id="parent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="339.0" prefWidth="395.0" style="-fx-background-color: #2a2a2a;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.LoginController">
+   <children>
+      <VBox alignment="BASELINE_CENTER" prefHeight="342.0" prefWidth="369.0" HBox.hgrow="ALWAYS">
+         <children>
+            <HBox prefHeight="6.0" prefWidth="383.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <children>
+                  <Label fx:id="LabelExitPrincipal" onMouseClicked="#exitLabel" text="X" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="375.0" top="-5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <ImageView fitHeight="116.0" fitWidth="119.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/king_elephant.png" />
+               </image>
+            </ImageView>
+            <HBox prefHeight="30.0" style="-fx-border-color: white;">
+               <VBox.margin>
+                  <Insets left="50.0" right="50.0" top="20.0" />
+               </VBox.margin>
+               <children>
+                  <TextField fx:id="TextUserPrincipal" prefHeight="29.0" prefWidth="254.0" promptText="Username" style="-fx-background-color: transparent; -fx-text-fill: white;">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </TextField>
+                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="28.0" prefWidth="38.0" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" style="visibility: transparent;">
+                           <image>
+                              <Image url="@../Images/user.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="1.0" right="1.0" top="1.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets right="-10.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="30.0" style="-fx-border-color: white;">
+               <VBox.margin>
+                  <Insets left="50.0" right="50.0" top="20.0" />
+               </VBox.margin>
+               <children>
+                  <PasswordField fx:id="PassPasswordPrincipal" prefHeight="45.0" prefWidth="258.0" promptText="Password" style="-fx-background-color: transparent; -fx-text-fill: white;" />
+                  <Button mnemonicParsing="false" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/key.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="1.0" right="1.0" top="1.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <Button fx:id="ButtonLoginPrincipal" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="5.0" mnemonicParsing="false" onKeyPressed="#login" onMouseClicked="#login" prefHeight="26.0" prefWidth="298.0" style="-fx-background-color: gray;" text="Login" textAlignment="CENTER" textFill="WHITE" underline="true">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Button>
+            <HBox prefHeight="34.0" prefWidth="375.0" style="-fx-background-color: transparent;">
+               <VBox.margin>
+                  <Insets left="50.0" right="50.0" top="10.0" />
+               </VBox.margin>
+               <children>
+                  <Hyperlink fx:id="hyperlinkNewUser" onAction="#newUserHyper" prefHeight="38.0" prefWidth="158.0" text="New User?" textFill="WHITE" underline="true">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets></Hyperlink>
+                  <Hyperlink fx:id="hyperlinkForgotPass" layoutX="10.0" layoutY="10.0" onAction="#newUserHyper" prefHeight="34.0" prefWidth="134.0" text="Forgot password?" textFill="WHITE" underline="true">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets left="65.0" />
+                     </HBox.margin>
+                  </Hyperlink>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</HBox>
